@@ -301,7 +301,7 @@ const WEATHER_DEBUG_EXTENSION = 'debug-extension';			// Weather extension settin
 			let getLocaleTime = function(date, localTimezone)
 			{
 				if(!localTimezone)
-				date = GLib.DateTime.new_from_unix_local(date).to_timezone(that.get_timezone());
+				date = GLib.DateTime.new_from_unix_local(date).to_local();
 				else
 				date = GLib.DateTime.new_from_unix_local(date).to_timezone(GLib.TimeZone.new_local());
 
